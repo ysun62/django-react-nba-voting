@@ -1,5 +1,5 @@
 module.exports = {
-  entry: "./frontend/src/index.js",
+  // entry: "./frontend/src/index.js",
   module: {
     rules: [
       {
@@ -21,6 +21,6 @@ module.exports = {
   },
   output: {
     filename: "main.js",
-    publicPath: "/frontend/static/frontend/"
+    publicPath: "/static/frontend/"
   }
 };
