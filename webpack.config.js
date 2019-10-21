@@ -21,6 +21,6 @@ module.exports = {
   },
   output: {
     filename: "main.js",
-    publicPath: "./frontend/static/frontend/"
+    publicPath: "/static/frontend/"
   }
 };
