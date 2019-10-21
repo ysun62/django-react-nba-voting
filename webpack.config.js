@@ -22,5 +22,8 @@ module.exports = {
   output: {
     filename: "main.js",
     publicPath: "/static/frontend/"
+  },
+  performance: {
+    hints: false
   }
 };
