@@ -1,0 +1,100 @@
+.home {
+  width: 100%;
+  height: 93vh;
+  text-align: center;
+  margin-top: 7vh;
+  background: rgb(194, 194, 194);
+  position: relative;
+  z-index: 0;
+}
+
+.home::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -100;
+  opacity: 0.7;
+  background-image: url("../../../static/frontend/image/baller.jpg");
+  background-size: contain;
+  background-position: center;
+}
+
+.home-container {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.home h2 {
+  font-size: 1.7em;
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke: 1.5px rgb(54, 54, 54);
+  /* background: white; */
+  width: 85%;
+}
+
+.welcome-header {
+  /* margin-left: 30px; */
+  width: 90%;
+}
+
+@media screen and (min-width: 768px) {
+  .home h2 {
+    font-size: 2.3em;
+    width: 80%;
+  }
+  .welcome-header {
+    font-size: 23px;
+    width: 85%;
+  }
+}
+
+@media screen and (min-width: 568px) and (orientation: landscape) {
+  .home {
+    margin-top: 13vh;
+  }
+  .home h2 {
+    font-size: 1.5em;
+  }
+  .welcome-header {
+    width: 100%;
+  }
+  .welcome-header-line {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (min-width: 812px) and (orientation: landscape) {
+  .welcome-header {
+    font-size: 17px;
+    margin: 10px 0;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .welcome-header {
+    width: 100%;
+    margin: -50px 0;
+  }
+  .welcome-header-line {
+    margin-left: 55px;
+  }
+}
+
+@media screen and (min-width: 900px) and (orientation: landscape) {
+  .home {
+    margin-top: 7vh;
+  }
+  .home h2 {
+    font-size: 2.5em;
+  }
+  .welcome-header {
+    margin: -20px 0;
+    font-size: 20px;
+  }
+}

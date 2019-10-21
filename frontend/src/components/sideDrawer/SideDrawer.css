@@ -1,0 +1,148 @@
+.side-drawer {
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 70%;
+  background: #fcfcfc;
+  z-index: 200;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-out;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.side-drawer.open {
+  transform: translateX(0);
+}
+
+.side-drawer ul {
+  list-style: none;
+}
+
+.main-menu {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  /* background: rgb(177, 177, 177); */
+  position: relative;
+  margin-top: 10%;
+  padding: 0;
+}
+
+.main-menu li {
+  margin: 20px 0 5px 0;
+  width: 75%;
+  color: black;
+  padding: 5px 0;
+  /* background: green; */
+}
+
+li.seperate-line {
+  margin: 10px 0 0 0;
+}
+
+li.login-li {
+  margin: 10px 0 0 0;
+}
+
+.line {
+  height: 2px;
+  background: rgb(199, 199, 199);
+}
+
+.main-menu a {
+  color: black;
+}
+
+.roster-div {
+  width: 75px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.sub-menu {
+  padding: 0;
+  display: none;
+}
+
+.sub-menu.open {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 5px;
+  margin-bottom: -15px;
+  width: 90%;
+}
+
+.sub-menu.open a {
+  font-size: 15px;
+}
+
+.sub-menu li {
+  width: 60%;
+  margin: 5px 0;
+  /* background: yellow; */
+}
+
+.sort-down {
+  margin-left: 10px;
+  margin-bottom: 3px;
+}
+
+.side-drawer li a:hover,
+.side-drawer li:hover,
+.side-drawer li:active {
+  color: #0253a4;
+}
+
+@media screen and (min-width: 768px) {
+  .side-drawer {
+    width: 60%;
+  }
+  .main-menu {
+    font-size: 20px;
+  }
+  .sub-menu a {
+    font-size: 20px;
+  }
+  .sub-menu.open {
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-left: 25px;
+  }
+  .sub-menu.open li {
+    width: 32%;
+    margin: 8px 0 5px 0;
+  }
+}
+
+@media screen and (min-width: 500px) and (orientation: landscape) {
+  .side-drawer {
+    width: 50%;
+  }
+  .main-menu {
+    margin-top: 0;
+  }
+  .main-menu li {
+    margin: 15px 0 0 0;
+    width: 80%;
+  }
+  .sub-menu.open {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .sub-menu.open li {
+    width: 32%;
+    margin: 4px 0 0 0;
+  }
+  .sub-menu.open a {
+    font-size: 14px;
+  }
+}

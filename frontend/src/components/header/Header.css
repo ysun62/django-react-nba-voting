@@ -1,0 +1,159 @@
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 7vh;
+  z-index: 150;
+}
+
+.active {
+  color: #0253a4 !important;
+}
+
+.navbar {
+  background: rgb(255, 255, 255);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header_logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.header_logo a {
+  font-size: 1.3em;
+  margin-left: 15px;
+  color: #0253a4;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.desktop-ul {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.desktop-ul li {
+  list-style: none;
+  padding-right: 70px;
+  font-size: 20px;
+  color: black;
+}
+
+.desktop-ul a {
+  color: black;
+}
+
+.desktop-ul li a:hover,
+.desktop-ul li:hover,
+.desktop-ul li:active {
+  color: #0253a4;
+}
+
+.burger {
+  height: 20px;
+  width: 30px;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 20px;
+  cursor: pointer;
+  border: none;
+  box-sizing: border-box;
+}
+
+.burger:focus {
+  outline: none;
+}
+
+.burger div {
+  background: rgb(0, 0, 0);
+  height: 3px;
+  width: 28px;
+}
+
+.roster-div-desktop {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.sort-down-desktop {
+  margin-left: 10px;
+  margin-bottom: 3px;
+}
+
+.sub-menu-desktop {
+  background: white;
+  opacity: 0.9;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: -10;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-out;
+}
+
+.sub-menu-desktop.open {
+  transform: translateY(0);
+}
+
+.sub-menu-desktop li {
+  width: 100%;
+  margin: 20px 0;
+}
+
+@media screen and (min-width: 500px) and (orientation: landscape) {
+  header {
+    height: 13vh;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .burger {
+    display: none;
+  }
+  .header_logo a {
+    margin-left: 55px;
+    font-size: 30px;
+  }
+  .desktop-ul {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 812px) and (orientation: landscape) {
+  .burger {
+    display: none;
+  }
+  .header_logo a {
+    margin-left: 25px;
+  }
+  .desktop-ul {
+    display: flex;
+  }
+  .desktop-ul li {
+    padding-right: 60px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 900px) and (orientation: landscape) {
+  header {
+    height: 7vh;
+  }
+  .header_logo a {
+    margin-left: 55px;
+    font-size: 25px;
+  }
+}

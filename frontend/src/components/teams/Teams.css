@@ -1,0 +1,31 @@
+.teams {
+  /* background: rgb(173, 173, 173); */
+  width: 95%;
+  /* position: absolute;
+    top: 30%;
+    left: 2.5%; */
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 800px) and (orientation: landscape) {
+  .teams {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .teams {
+    width: 83%;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .teams {
+    width: 70%;
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "name": "nba-django-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development --watch ./nbavoting/frontend/src/index.js --output ./nbavoting/frontend/static/frontend/main.js",
+    "build": "webpack --mode production ./nbavoting/frontend/src/index.js --output ./nbavoting/frontend/static/frontend/main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "file-loader": "^4.2.0",
+    "webpack": "^4.41.1",
+    "webpack-cli": "^3.3.9"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.6.3",
+    "axios": "^0.19.0",
+    "core-js": "^3.3.2",
+    "css-loader": "^3.2.0",
+    "image-webpack-loader": "^6.0.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.10.2",
+    "react-alert": "^6.0.0",
+    "react-alert-template-basic": "^1.0.0",
+    "react-dom": "^16.10.2",
+    "react-redux": "^7.1.1",
+    "react-router-dom": "^5.1.2",
+    "react-transition-group": "^4.3.0",
+    "redux": "^4.0.4",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0",
+    "style-loader": "^1.0.0"
+  }
+}

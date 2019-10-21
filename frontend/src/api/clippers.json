@@ -1,0 +1,237 @@
+{
+  "players": {
+    "player": [
+      {
+        "first_name": "Patrick",
+        "last_name": "Beverley",
+        "display_name": "Beverley, Patrick",
+        "height_ft": "6",
+        "height_in": "1",
+        "weight_lbs": "185",
+        "jersey_number": "21",
+        "position_short": "G",
+        "years_pro": "7"
+      },
+      {
+        "first_name": "Amir",
+        "last_name": "Coffey",
+        "display_name": "Coffey, Amir",
+        "height_ft": "6",
+        "height_in": "8",
+        "weight_lbs": "205",
+        "jersey_number": "7",
+        "position_short": "G",
+        "years_pro": "0"
+      },
+      {
+        "first_name": "Paul",
+        "last_name": "George",
+        "display_name": "George, Paul",
+        "height_ft": "6",
+        "height_in": "9",
+        "weight_lbs": "220",
+        "jersey_number": "13",
+        "position_short": "F",
+        "years_pro": "9"
+      },
+      {
+        "first_name": "Donte",
+        "last_name": "Grantham",
+        "display_name": "Grantham, Donte",
+        "height_ft": "6",
+        "height_in": "8",
+        "weight_lbs": "215",
+        "jersey_number": "0",
+        "position_short": "F",
+        "years_pro": "1"
+      },
+      {
+        "first_name": "JaMychal",
+        "last_name": "Green",
+        "display_name": "Green, JaMychal",
+        "height_ft": "6",
+        "height_in": "9",
+        "weight_lbs": "227",
+        "jersey_number": "4",
+        "position_short": "F",
+        "years_pro": "5"
+      },
+      {
+        "first_name": "Maurice",
+        "last_name": "Harkless",
+        "display_name": "Harkless, Maurice",
+        "height_ft": "6",
+        "height_in": "9",
+        "weight_lbs": "220",
+        "jersey_number": "8",
+        "position_short": "F",
+        "years_pro": "7"
+      },
+      {
+        "first_name": "Montrezl",
+        "last_name": "Harrell",
+        "display_name": "Harrell, Montrezl",
+        "height_ft": "6",
+        "height_in": "8",
+        "weight_lbs": "240",
+        "jersey_number": "5",
+        "position_short": "F-C",
+        "years_pro": "4"
+      },
+      {
+        "first_name": "Mfiondu",
+        "last_name": "Kabengele",
+        "display_name": "Kabengele, Mfiondu",
+        "height_ft": "6",
+        "height_in": "10",
+        "weight_lbs": "250",
+        "jersey_number": "25",
+        "position_short": "F",
+        "years_pro": "0"
+      },
+      {
+        "first_name": "Terry",
+        "last_name": "Larrier",
+        "display_name": "Larrier, Terry",
+        "height_ft": "6",
+        "height_in": "8",
+        "weight_lbs": "195",
+        "jersey_number": "11",
+        "position_short": "F",
+        "years_pro": "0"
+      },
+      {
+        "first_name": "Kawhi",
+        "last_name": "Leonard",
+        "display_name": "Leonard, Kawhi",
+        "height_ft": "6",
+        "height_in": "7",
+        "weight_lbs": "230",
+        "jersey_number": "2",
+        "position_short": "F",
+        "years_pro": "8"
+      },
+      {
+        "first_name": "Mathias",
+        "last_name": "Lessort",
+        "display_name": "Lessort, Mathias",
+        "height_ft": "6",
+        "height_in": "9",
+        "weight_lbs": "235",
+        "jersey_number": "",
+        "position_short": "F",
+        "years_pro": "0"
+      },
+      {
+        "first_name": "Terance",
+        "last_name": "Mann",
+        "display_name": "Mann, Terance",
+        "height_ft": "6",
+        "height_in": "7",
+        "weight_lbs": "215",
+        "jersey_number": "14",
+        "position_short": "G",
+        "years_pro": "0"
+      },
+      {
+        "first_name": "Rodney",
+        "last_name": "McGruder",
+        "display_name": "McGruder, Rodney",
+        "height_ft": "6",
+        "height_in": "4",
+        "weight_lbs": "200",
+        "jersey_number": "19",
+        "position_short": "G",
+        "years_pro": "3"
+      },
+      {
+        "first_name": "Johnathan",
+        "last_name": "Motley",
+        "display_name": "Motley, Johnathan",
+        "height_ft": "6",
+        "height_in": "10",
+        "weight_lbs": "230",
+        "jersey_number": "15",
+        "position_short": "F",
+        "years_pro": "2"
+      },
+      {
+        "first_name": "James",
+        "last_name": "Palmer Jr.",
+        "display_name": "Palmer Jr., James",
+        "height_ft": "6",
+        "height_in": "6",
+        "weight_lbs": "207",
+        "jersey_number": "12",
+        "position_short": "G",
+        "years_pro": "0"
+      },
+      {
+        "first_name": "Patrick",
+        "last_name": "Patterson",
+        "display_name": "Patterson, Patrick",
+        "height_ft": "6",
+        "height_in": "9",
+        "weight_lbs": "230",
+        "jersey_number": "54",
+        "position_short": "F",
+        "years_pro": "9"
+      },
+      {
+        "first_name": "Jerome",
+        "last_name": "Robinson",
+        "display_name": "Robinson, Jerome",
+        "height_ft": "6",
+        "height_in": "5",
+        "weight_lbs": "190",
+        "jersey_number": "1",
+        "position_short": "G",
+        "years_pro": "1"
+      },
+      {
+        "first_name": "Landry",
+        "last_name": "Shamet",
+        "display_name": "Shamet, Landry",
+        "height_ft": "6",
+        "height_in": "5",
+        "weight_lbs": "190",
+        "jersey_number": "20",
+        "position_short": "G",
+        "years_pro": "1"
+      },
+      {
+        "first_name": "Derrick",
+        "last_name": "Walton Jr.",
+        "display_name": "Walton Jr., Derrick",
+        "height_ft": "6",
+        "height_in": "1",
+        "weight_lbs": "189",
+        "jersey_number": "10",
+        "position_short": "G",
+        "years_pro": "1"
+      },
+      {
+        "first_name": "Lou",
+        "last_name": "Williams",
+        "display_name": "Williams, Lou",
+        "height_ft": "6",
+        "height_in": "1",
+        "weight_lbs": "175",
+        "jersey_number": "23",
+        "position_short": "G",
+        "years_pro": "14"
+      },
+      {
+        "first_name": "Ivica",
+        "last_name": "Zubac",
+        "display_name": "Zubac, Ivica",
+        "height_ft": "7",
+        "height_in": "1",
+        "weight_lbs": "240",
+        "jersey_number": "40",
+        "position_short": "C",
+        "years_pro": "3"
+      }
+    ]
+  }
+}

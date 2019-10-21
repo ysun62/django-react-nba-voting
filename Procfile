@@ -1,0 +1,1 @@
+web: gunicorn nbavoting.wsgi:application --log-file -

@@ -1,0 +1,34 @@
+.roster-layout {
+  background: rgb(233, 233, 233);
+  padding: 7vh 0;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.roster-layout h2 {
+  margin-top: 3%;
+}
+
+.player-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media screen and (min-width: 500px) and (orientation: landscape) {
+  .roster-layout h2 {
+    margin-top: 6%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .roster-layout h2 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .roster-layout h2 {
+    margin-top: 3%;
+  }
+}

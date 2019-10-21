@@ -1,0 +1,50 @@
+[
+  {
+    "model": "teams.team",
+    "fields": {
+      "id": "warriors",
+      "thumbUp": 0,
+      "thumbDown": 0
+    }
+  },
+  {
+    "model": "teams.team",
+    "fields": {
+      "id": "lakers",
+      "thumbUp": 0,
+      "thumbDown": 0
+    }
+  },
+  {
+    "model": "teams.team",
+    "fields": {
+      "id": "rockets",
+      "thumbUp": 0,
+      "thumbDown": 0
+    }
+  },
+  {
+    "model": "teams.team",
+    "fields": {
+      "id": "nets",
+      "thumbUp": 0,
+      "thumbDown": 0
+    }
+  },
+  {
+    "model": "teams.team",
+    "fields": {
+      "id": "clippers",
+      "thumbUp": 0,
+      "thumbDown": 0
+    }
+  },
+  {
+    "model": "teams.team",
+    "fields": {
+      "id": "bucks",
+      "thumbUp": 0,
+      "thumbDown": 0
+    }
+  }
+]

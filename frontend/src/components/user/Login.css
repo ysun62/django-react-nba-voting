@@ -1,0 +1,155 @@
+.background {
+  background: #2e4158;
+  min-height: 93vh;
+  margin-top: 7vh;
+  display: flex;
+  align-items: flex-start;
+}
+
+.form {
+  height: 95%;
+  width: 100%;
+  /* background: rgb(199, 199, 199); */
+  margin: 0 auto;
+}
+
+.form-field {
+  margin-bottom: 10px;
+}
+
+.PageSwitcher {
+  display: flex;
+  /* align-items: center; */
+  text-align: center;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.PageSwitcher__Item {
+  background-color: #4c5d72;
+  color: #9da6b1;
+  padding: 10px 25px;
+  cursor: pointer;
+  font-size: 0.9em;
+  border: none;
+  outline: none;
+  /* display: inline-block; */
+  text-decoration: none;
+}
+
+.PageSwitcher__Item:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.PageSwitcher__Item--Active {
+  background-color: #5ed0c0;
+  color: white;
+}
+
+.PageSwitcher__Item:first-child {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+.PageSwitcher__Item:last-child {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.font-white {
+  color: white;
+  /* display: block; */
+  /* background: rgb(153, 153, 153); */
+  width: 90%;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background: rgb(139, 139, 139); */
+  margin-bottom: 40px;
+}
+
+.form-group.tider {
+  margin-bottom: 10px;
+}
+
+.form-control {
+  width: 90%;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  outline: none;
+  padding: 0 5px;
+}
+
+.FormField__Button {
+  background-color: #52c4b9;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  padding: 15px 70px;
+  font-size: 1em;
+  font-weight: 500;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.FormField {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* background: yellow; */
+  width: 100%;
+}
+
+.page-switch-link {
+  color: #52c4b9;
+}
+
+.page-switch-link:hover {
+  color: #52c4b9;
+  text-decoration: underline;
+}
+
+.form-group:nth-last-child(2) {
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .form {
+    width: 550px;
+  }
+}
+
+@media screen and (min-width: 568px) and (orientation: landscape) {
+  .background {
+    margin-top: 13vh;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  .form {
+    width: 550px;
+  }
+}
+
+@media screen and (min-width: 900px) and (orientation: landscape) {
+  .background {
+    margin-top: 7vh;
+  }
+  .form {
+    width: 600px;
+  }
+  .form-group {
+    margin-bottom: 40px;
+  }
+}

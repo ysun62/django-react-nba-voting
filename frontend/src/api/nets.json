@@ -1,0 +1,226 @@
+{
+  "players": {
+    "player": [
+      {
+        "first_name": "Deng",
+        "last_name": "Adel",
+        "display_name": "Adel, Deng",
+        "height_ft": "6",
+        "height_in": "7",
+        "weight_lbs": "196",
+        "jersey_number": "10",
+        "position_short": "F",
+        "years_pro": "1"
+      },
+      {
+        "first_name": "Jarrett",
+        "last_name": "Allen",
+        "display_name": "Allen, Jarrett",
+        "height_ft": "6",
+        "height_in": "11",
+        "weight_lbs": "243",
+        "jersey_number": "31",
+        "position_short": "C",
+        "years_pro": "2"
+      },
+      {
+        "first_name": "Wilson",
+        "last_name": "Chandler",
+        "display_name": "Chandler, Wilson",
+        "height_ft": "6",
+        "height_in": "8",
+        "weight_lbs": "235",
+        "jersey_number": "21",
+        "position_short": "F",
+        "years_pro": "12"
+      },
+      {
+        "first_name": "Nicolas",
+        "last_name": "Claxton",
+        "display_name": "Claxton, Nicolas",
+        "height_ft": "6",
+        "height_in": "11",
+        "weight_lbs": "215",
+        "jersey_number": "33",
+        "position_short": "F-C",
+        "years_pro": "0"
+      },
+      {
+        "first_name": "Spencer",
+        "last_name": "Dinwiddie",
+        "display_name": "Dinwiddie, Spencer",
+        "height_ft": "6",
+        "height_in": "5",
+        "weight_lbs": "215",
+        "jersey_number": "8",
+        "position_short": "G",
+        "years_pro": "5"
+      },
+      {
+        "first_name": "Kevin",
+        "last_name": "Durant",
+        "display_name": "Durant, Kevin",
+        "height_ft": "6",
+        "height_in": "10",
+        "weight_lbs": "240",
+        "jersey_number": "7",
+        "position_short": "F",
+        "years_pro": "12"
+      },
+      {
+        "first_name": "John",
+        "last_name": "Egbunu",
+        "display_name": "Egbunu, John",
+        "height_ft": "6",
+        "height_in": "10",
+        "weight_lbs": "257",
+        "jersey_number": "15",
+        "position_short": "C",
+        "years_pro": "0"
+      },
+      {
+        "first_name": "Henry",
+        "last_name": "Ellenson",
+        "display_name": "Ellenson, Henry",
+        "height_ft": "6",
+        "height_in": "10",
+        "weight_lbs": "240",
+        "jersey_number": "4",
+        "position_short": "F-C",
+        "years_pro": "3"
+      },
+      {
+        "first_name": "Joe",
+        "last_name": "Harris",
+        "display_name": "Harris, Joe",
+        "height_ft": "6",
+        "height_in": "6",
+        "weight_lbs": "220",
+        "jersey_number": "12",
+        "position_short": "G-F",
+        "years_pro": "5"
+      },
+      {
+        "first_name": "Kyrie",
+        "last_name": "Irving",
+        "display_name": "Irving, Kyrie",
+        "height_ft": "6",
+        "height_in": "2",
+        "weight_lbs": "195",
+        "jersey_number": "11",
+        "position_short": "G",
+        "years_pro": "8"
+      },
+      {
+        "first_name": "DeAndre",
+        "last_name": "Jordan",
+        "display_name": "Jordan, DeAndre",
+        "height_ft": "6",
+        "height_in": "11",
+        "weight_lbs": "265",
+        "jersey_number": "6",
+        "position_short": "C",
+        "years_pro": "11"
+      },
+      {
+        "first_name": "Rodions",
+        "last_name": "Kurucs",
+        "display_name": "Kurucs, Rodions",
+        "height_ft": "6",
+        "height_in": "9",
+        "weight_lbs": "228",
+        "jersey_number": "00",
+        "position_short": "F",
+        "years_pro": "1"
+      },
+      {
+        "first_name": "Caris",
+        "last_name": "LeVert",
+        "display_name": "LeVert, Caris",
+        "height_ft": "6",
+        "height_in": "6",
+        "weight_lbs": "205",
+        "jersey_number": "22",
+        "position_short": "G",
+        "years_pro": "3"
+      },
+      {
+        "first_name": "Dzanan",
+        "last_name": "Musa",
+        "display_name": "Musa, Dzanan",
+        "height_ft": "6",
+        "height_in": "9",
+        "weight_lbs": "217",
+        "jersey_number": "13",
+        "position_short": "G-F",
+        "years_pro": "1"
+      },
+      {
+        "first_name": "David",
+        "last_name": "Nwaba",
+        "display_name": "Nwaba, David",
+        "height_ft": "6",
+        "height_in": "5",
+        "weight_lbs": "219",
+        "jersey_number": "0",
+        "position_short": "G-F",
+        "years_pro": "3"
+      },
+      {
+        "first_name": "Theo",
+        "last_name": "Pinson",
+        "display_name": "Pinson, Theo",
+        "height_ft": "6",
+        "height_in": "5",
+        "weight_lbs": "212",
+        "jersey_number": "1",
+        "position_short": "G-F",
+        "years_pro": "1"
+      },
+      {
+        "first_name": "Taurean",
+        "last_name": "Prince",
+        "display_name": "Prince, Taurean",
+        "height_ft": "6",
+        "height_in": "7",
+        "weight_lbs": "218",
+        "jersey_number": "2",
+        "position_short": "F",
+        "years_pro": "3"
+      },
+      {
+        "first_name": "Garrett",
+        "last_name": "Temple",
+        "display_name": "Temple, Garrett",
+        "height_ft": "6",
+        "height_in": "5",
+        "weight_lbs": "195",
+        "jersey_number": "17",
+        "position_short": "G-F",
+        "years_pro": "9"
+      },
+      {
+        "first_name": "Lance",
+        "last_name": "Thomas",
+        "display_name": "Thomas, Lance",
+        "height_ft": "6",
+        "height_in": "8",
+        "weight_lbs": "235",
+        "jersey_number": "42",
+        "position_short": "F",
+        "years_pro": "8"
+      },
+      {
+        "first_name": "C.J.",
+        "last_name": "Williams",
+        "display_name": "Williams, C.J.",
+        "height_ft": "6",
+        "height_in": "5",
+        "weight_lbs": "234",
+        "jersey_number": "9",
+        "position_short": "G",
+        "years_pro": "2"
+      }
+    ]
+  }
+}
