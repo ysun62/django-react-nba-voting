@@ -118,6 +118,7 @@ export class Home extends React.Component {
               upVote: id
             };
           });
+          alert.show(`You Up Voted ${id}`);
         }
       } else if (!up && this.state.downVote === "") {
         if (id === this.state.upVote) {
@@ -137,6 +138,7 @@ export class Home extends React.Component {
               downVote: id
             };
           });
+          alert.show(`You Down Voted ${id}`);
         }
       } else {
         alert.show("You have already voted.");
