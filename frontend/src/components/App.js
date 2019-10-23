@@ -8,6 +8,7 @@ import { HashRouter as Router, Switch, Route } from "react-router-dom";
 
 import Alerts from "./alerts/Alerts";
 import Header from "./header/Header";
+import Footer from "./footer/Footer";
 import SideDrawer from "./sideDrawer/SideDrawer";
 import Backdrop from "./backdrop/Backdrop";
 import Home from "./home/Home";
@@ -85,6 +86,7 @@ class App extends React.Component {
               subMenuCloseHandler={this.subMenuCloseHandler}
             />
             {backDrop}
+            <Footer />
             <main>
               <Switch>
                 <Route exact path="/" component={Home} />

@@ -1,0 +1,58 @@
+footer {
+  position: fixed;
+  bottom: 30px;
+  width: 100%;
+  z-index: 150;
+}
+
+footer i {
+  font-size: 25px;
+  color: #d0411f;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  margin-left: 10px;
+  /* margin-bottom: 10px; */
+  cursor: pointer;
+
+  animation: bounce 0.5s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 30px, 0);
+    -webkit-transform: translate3d(0, 30px, 0);
+    -moz-transform: translate3d(0, 30px, 0);
+    -ms-transform: translate3d(0, 30px, 0);
+    -o-transform: translate3d(0, 30px, 0);
+  }
+}
+
+@media screen and (min-width: 375px) and (min-height: 700px) {
+  footer i {
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 500px) and (orientation: landscape) {
+  footer i {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 768px) and (orientation: portrait) {
+  footer i {
+    font-size: 33px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  footer i {
+    font-size: 38px;
+  }
+}
