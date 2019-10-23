@@ -33,7 +33,7 @@ h3 {
   /* cursor: pointer; */
 }
 
-@media screen and (min-width: 375px) and (min-height: 650px) {
+@media screen and (min-width: 375px) and (min-height: 740px) {
   .team {
     height: 20%;
   }
@@ -48,19 +48,21 @@ h3 {
   }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
   .team {
-    width: 35%;
-    margin: 0 7% 3% 7%;
+    width: 205px;
+    margin: 0 3% 3% 3%;
   }
   h3 {
-    width: 60%;
+    width: 65%;
   }
 }
 
 @media screen and (min-width: 768px) {
   .team {
     width: 250px;
+    height: 130px;
+    margin: 0 7% 3% 7%;
   }
   h3 {
     font-size: 1.5em;
@@ -90,13 +92,14 @@ h3 {
 @media screen and (min-width: 900px) and (min-height: 1100px) {
   .team {
     width: 300px;
-    height: 21%;
+    height: 160px;
   }
 }
 
 @media screen and (min-width: 900px) and (orientation: landscape) {
   .team {
-    height: 30%;
+    width: 250px;
+    height: 140px;
   }
   h3 {
     font-size: 1.3em;
@@ -107,6 +110,7 @@ h3 {
 @media screen and (min-width: 1300px) {
   .team {
     width: 300px;
+    height: 160px;
   }
   h3 {
     font-size: 1.6em;

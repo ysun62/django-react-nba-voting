@@ -33,7 +33,7 @@
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 900px) and (min-height: 1100px) {
   .rating i {
     font-size: 26px;
   }
