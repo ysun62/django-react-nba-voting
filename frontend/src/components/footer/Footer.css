@@ -2,7 +2,7 @@ footer {
   position: fixed;
   bottom: 30px;
   width: 100%;
-  z-index: 150;
+  z-index: 30;
 }
 
 footer i {

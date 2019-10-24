@@ -1,10 +1,13 @@
 import React from "react";
 import "./Footer.css";
 
-const Footer = () => {
+const Footer = props => {
   return (
     <footer>
-      <i className="fas fa-basketball-ball"></i>
+      <i
+        className="fas fa-basketball-ball"
+        onClick={props.modalOpenHandler}
+      ></i>
     </footer>
   );
 };

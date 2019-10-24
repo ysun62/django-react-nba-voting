@@ -6,8 +6,10 @@ import AlertTemplate from "react-alert-template-basic";
 import store from "../store";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 
+import questions from "../api/questions.json";
 import Alerts from "./alerts/Alerts";
 import Header from "./header/Header";
+import Trivia from "./trivia/Trivia";
 import Footer from "./footer/Footer";
 import SideDrawer from "./sideDrawer/SideDrawer";
 import Backdrop from "./backdrop/Backdrop";
@@ -33,7 +35,10 @@ const alertOptions = {
 class App extends React.Component {
   state = {
     sideDrawerOpen: false,
-    subMenuOpen: false
+    subMenuOpen: false,
+    modalOpen: false
+    // questions: questions,
+    // question: null
   };
 
   sideDrawerOpenHandler = () => {
@@ -60,14 +65,43 @@ class App extends React.Component {
     });
   };
 
+  modalOpenHandler = () => {
+    this.setState(prevState => {
+      return { modalOpen: !prevState.modalOpen };
+    });
+  };
+  modalCloseHandler = () => {
+    this.setState({
+      modalOpen: false
+    });
+  };
+
+  componentDidMount() {
+    // this.setInterval(() => {
+    //   if (this.state.modalOpen) {
+    //     this.setState({
+    //       question: questions[Math.floor(Math.random() * questions.length)]
+    //     });
+    //     console.log(this.state.question);
+    //   }
+    // }, 3000);
+    console.log("mounted");
+  }
+  componentWillUnmount() {
+    console.log("unmounted");
+  }
+
+  // clearInterval(interval)
+
   render() {
     let backDrop;
 
-    if (this.state.sideDrawerOpen) {
+    if (this.state.sideDrawerOpen || this.state.modalOpen) {
       backDrop = (
         <Backdrop
           sideDrawerCloseHandler={this.sideDrawerCloseHandler}
           subMenuCloseHandler={this.subMenuCloseHandler}
+          modalCloseHandler={this.modalCloseHandler}
         />
       );
     }
@@ -78,6 +112,9 @@ class App extends React.Component {
           <Router>
             <Header sideDrawerOpenHandler={this.sideDrawerOpenHandler} />
             <Alerts />
+            {this.state.modalOpen && (
+              <Trivia modalCloseHandler={this.modalCloseHandler} />
+            )}
             <SideDrawer
               sideDrawerOpen={this.state.sideDrawerOpen}
               sideDrawerCloseHandler={this.sideDrawerCloseHandler}
@@ -86,7 +123,7 @@ class App extends React.Component {
               subMenuCloseHandler={this.subMenuCloseHandler}
             />
             {backDrop}
-            <Footer />
+            <Footer modalOpenHandler={this.modalOpenHandler} />
             <main>
               <Switch>
                 <Route exact path="/" component={Home} />
