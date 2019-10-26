@@ -37,8 +37,6 @@ class App extends React.Component {
     sideDrawerOpen: false,
     subMenuOpen: false,
     modalOpen: false
-    // questions: questions,
-    // question: null
   };
 
   sideDrawerOpenHandler = () => {
@@ -75,23 +73,6 @@ class App extends React.Component {
       modalOpen: false
     });
   };
-
-  componentDidMount() {
-    // this.setInterval(() => {
-    //   if (this.state.modalOpen) {
-    //     this.setState({
-    //       question: questions[Math.floor(Math.random() * questions.length)]
-    //     });
-    //     console.log(this.state.question);
-    //   }
-    // }, 3000);
-    console.log("mounted");
-  }
-  componentWillUnmount() {
-    console.log("unmounted");
-  }
-
-  // clearInterval(interval)
 
   render() {
     let backDrop;

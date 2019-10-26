@@ -81,11 +81,6 @@ export class Home extends React.Component {
         })
       });
     });
-    console.log("home page mounted");
-  }
-
-  componentWillUnmount() {
-    console.log("home unmounted");
   }
 
   // When props from Redux come in, set the state

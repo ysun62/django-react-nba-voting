@@ -1,5 +1,6 @@
 import React from "react";
-import Countdown from "react-countdown-now";
+import Timer from "../timer/Timer";
+import Answer from "../answer/Answer";
 
 import questions from "../../api/questions.json";
 import "./Trivia.css";
@@ -7,13 +8,21 @@ import "./Trivia.css";
 class Trivia extends React.Component {
   state = {
     questions: questions,
-    question: null
+    question: null,
+    seconds: 10
   };
 
   componentDidMount() {
-    const { questions } = this.state;
-    console.log("trivia mounted", questions);
     this.updateState();
+  }
+
+  componentDidUpdate(prevState) {
+    const { questions } = this.state;
+    if (questions !== prevState.questions && questions.length > 0) {
+      this.timerHandle = setTimeout(() => {
+        this.updateState();
+      }, 10000);
+    }
   }
 
   updateState = () => {
@@ -22,22 +31,10 @@ class Trivia extends React.Component {
     this.setState({
       question: q,
       questions: [...questions.filter(question => question.id !== q.id)]
-      // timer: 10000
     });
   };
 
-  componentDidUpdate(prevState) {
-    console.log(this.state.question);
-    const { questions, question } = this.state;
-    if (questions !== prevState.questions && questions.length > 0) {
-      this.timerHandle = setTimeout(() => {
-        this.updateState();
-      }, 10000);
-    }
-  }
-
   componentWillUnmount() {
-    console.log("trivia unmounted");
     if (this.timerHandle) {
       clearTimeout(this.timerHandle);
       this.timerHandle = 0;
@@ -46,26 +43,18 @@ class Trivia extends React.Component {
 
   render() {
     const { question } = this.state;
-    console.log("render");
     const quiz_section = question !== null && (
-      <div className="quiz-section">
+      <React.Fragment>
         <h4 className="quiz-question">{question.Q}</h4>
         <ul className="answer-section">
-          {question.A.map(a => (
-            <li key={a} className="answer">
-              {a}
-            </li>
+          {question.A.map((a, index) => (
+            <Answer key={a} index={index} answer={a} />
           ))}
         </ul>
         <div className="timer">
-          {/* <Countdown
-            date={Date.now() + question.timer * 200}
-            key={question.timer * 200}
-          />
-          {console.log(question.timer * 1000)} */}
-          Timer
+          <Timer question={this.state.question} />
         </div>
-      </div>
+      </React.Fragment>
     );
     return (
       <div className="modal-contents">
@@ -77,24 +66,10 @@ class Trivia extends React.Component {
             onClick={this.props.modalCloseHandler}
           ></i>
         </div>
-        {question !== null && quiz_section}
+        <div className="quiz-section">{question !== null && quiz_section}</div>
       </div>
     );
   }
 }
-
-// Random component
-// const Completionist = () => <span>You are good to go!</span>;
-
-// // Renderer callback with condition
-// const renderer = ({ seconds, completed }) => {
-//   if (completed) {
-//     // Render a complete state
-//     return <Completionist />;
-//   } else {
-//     // Render a countdown
-//     return <span>{seconds}</span>;
-//   }
-// };
 
 export default Trivia;
