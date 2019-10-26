@@ -133,7 +133,7 @@
     padding: 5px 0 0 0;
   }
   .answer-section {
-    width: 60%;
+    width: 50%;
     height: 40%;
   }
 }
@@ -142,6 +142,10 @@
   .modal-contents {
     height: 70%;
     width: 50%;
+  }
+  .answer-section {
+    width: 70%;
+    height: 40%;
   }
 }
 
@@ -153,10 +157,6 @@
   }
   .quiz-question {
     padding: 20px 0 10px 0;
-  }
-  .answer-section {
-    width: 80%;
-    height: 40%;
   }
   .answer {
     width: 125px;
