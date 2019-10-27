@@ -36,7 +36,11 @@ export default class Timer extends Component {
     //    let display =
     return (
       <React.Fragment>
-        {questionNum >= 10 && seconds === 1 ? <h2>finished</h2> : seconds}
+        {questionNum >= 10 && seconds === 1 ? (
+          <h4>finished</h4>
+        ) : (
+          <h4>{seconds}</h4>
+        )}
         <h4>TIME REMAINING</h4>
       </React.Fragment>
     );
