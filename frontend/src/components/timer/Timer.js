@@ -8,7 +8,7 @@ export default class Timer extends Component {
 
   componentDidMount() {
     this.myInterval = setInterval(() => {
-      const { seconds } = this.state;
+      const { seconds, questionNum } = this.state;
 
       if (seconds > 1) {
         this.setState({
@@ -20,6 +20,9 @@ export default class Timer extends Component {
           seconds: 10,
           questionNum: this.state.questionNum + 1
         });
+      }
+      if (questionNum >= 10) {
+        clearInterval(this.myInterval);
       }
     }, 1000);
   }
