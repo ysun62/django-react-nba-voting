@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class Timer extends Component {
   state = {
-    seconds: 3,
+    seconds: 10,
     questionNum: 1
   };
 
@@ -17,7 +17,7 @@ export default class Timer extends Component {
       }
       if (questionNum < 10 && seconds === 1) {
         this.setState({
-          seconds: 3,
+          seconds: 10,
           questionNum: this.state.questionNum + 1
         });
       }

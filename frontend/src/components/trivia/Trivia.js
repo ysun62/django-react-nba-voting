@@ -21,7 +21,7 @@ class Trivia extends React.Component {
     if (questions !== prevState.questions && questions.length > 0) {
       this.timerHandle = setTimeout(() => {
         this.updateState();
-      }, 3000);
+      }, 10000);
     }
   }
 
