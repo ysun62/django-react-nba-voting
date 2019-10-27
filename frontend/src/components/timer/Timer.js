@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class Timer extends Component {
   state = {
-    seconds: 10,
+    seconds: 3,
     questionNum: 1
   };
 
@@ -15,13 +15,13 @@ export default class Timer extends Component {
           seconds: seconds - 1
         });
       }
-      if (seconds === 1) {
+      if (questionNum < 10 && seconds === 1) {
         this.setState({
-          seconds: 10,
+          seconds: 3,
           questionNum: this.state.questionNum + 1
         });
       }
-      if (questionNum >= 10) {
+      if (questionNum >= 10 && seconds === 1) {
         clearInterval(this.myInterval);
       }
     }, 1000);
