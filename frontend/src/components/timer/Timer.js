@@ -15,17 +15,23 @@ export default class Timer extends Component {
           seconds: seconds - 1
         });
       }
+      if (seconds === 1) {
+        this.setState({
+          seconds: 10,
+          questionNum: this.state.questionNum + 1
+        });
+      }
     }, 1000);
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
-    if (nextProps.question !== this.props.question) {
-      this.setState({
-        seconds: 10,
-        questionNum: this.state.questionNum + 1
-      });
-    }
-  }
+  //   UNSAFE_componentWillReceiveProps(nextProps) {
+  //     if (nextProps.question !== this.props.question) {
+  //       this.setState({
+  //         seconds: 10,
+  //         questionNum: this.state.questionNum + 1
+  //       });
+  //     }
+  //   }
 
   componentWillUnmount() {
     clearInterval(this.myInterval);
