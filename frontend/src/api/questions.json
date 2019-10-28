@@ -3,70 +3,60 @@
     "id": 1,
     "Q": "Where Did LeBron James Play College Basketball?",
     "A": ["North Carolina", "Duke", "Ohio State", "High School Only"],
-    "correct": "High School Only",
-    "timer": 10
+    "correct": "High School Only"
   },
   {
     "id": 2,
     "Q": "Which Team Drafted Andrew Wiggins?",
     "A": ["Knicks", "Cavaliers", "Warriors", "Celtics"],
-    "correct": "Cavaliers",
-    "timer": 10
+    "correct": "Cavaliers"
   },
   {
     "id": 3,
     "Q": "What Is Joel Embiid's Nickname?",
     "A": ["The Answer", "The General", "The Process", "The Man"],
-    "correct": "The Process",
-    "timer": 10
+    "correct": "The Process"
   },
   {
     "id": 4,
     "Q": "Which Team Drafted Isaiah Thomas?",
     "A": ["Grizzlies", "Heat", "Cavaliers", "Kings"],
-    "correct": "Kings",
-    "timer": 10
+    "correct": "Kings"
   },
   {
     "id": 5,
     "Q": "Which Team Traded For Gordon Hayward?",
     "A": ["Magic", "Celtics", "Wizards", "Warriors"],
-    "correct": "Magic",
-    "timer": 10
+    "correct": "Magic"
   },
   {
     "id": 6,
     "Q": "Which Team Plays In Charlotte?",
     "A": ["Hornets", "Heat", "Spurs", "Clippers"],
-    "correct": "Hornets",
-    "timer": 10
+    "correct": "Hornets"
   },
   {
     "id": 7,
     "Q": "Where Did Anthony Davis Play College Basketball?",
     "A": ["Kentucky", "Kansas", "Stanford", "Utah"],
-    "correct": "Kentucky",
-    "timer": 10
+    "correct": "Kentucky"
   },
   {
     "id": 8,
     "Q": "How Many Championships Does Kobe Bryant Have?",
     "A": ["2", "4", "5", "6"],
-    "correct": "5",
-    "timer": 10
+    "correct": "5"
   },
   {
     "id": 9,
     "Q": "How Old Is LeBron James?",
     "A": ["33", "34", "35", "36"],
-    "correct": "34",
-    "timer": 10
+    "correct": "34"
   },
   {
     "id": 10,
     "Q": "How Many Points Did Kobe Bryant Score In His Last Game?",
     "A": ["55", "60", "61", "63"],
-    "correct": "60",
-    "timer": 10
+    "correct": "60"
   }
 ]

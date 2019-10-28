@@ -8,6 +8,8 @@ class Answer extends React.Component {
     }
     e.target.style.background =
       "linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(3,22,28,1) 0%, rgba(11,88,103,1) 100%)";
+    //   if(e.target.innerText === )
+    console.log(e.target.innerText);
   };
 
   render() {
