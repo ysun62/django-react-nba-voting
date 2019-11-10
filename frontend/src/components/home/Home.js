@@ -21,10 +21,13 @@ export class Home extends React.Component {
   componentDidMount() {
     axios.get("/api/teams/").then(res => {
       this.setState({
-        teams: this.state.teams.map((team, index) => {
-          let vote = res.data[index];
-          team.thumbUp = vote.thumbUp;
-          team.thumbDown = vote.thumbDown;
+        teams: this.state.teams.map(team => {
+          res.data.map(vote => {
+            if (vote.id === team.id) {
+              team.thumbUp = vote.thumbUp;
+              team.thumbDown = vote.thumbDown;
+            }
+          });
           return team;
         })
       });
