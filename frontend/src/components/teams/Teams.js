@@ -14,8 +14,8 @@ function Teams(props) {
 }
 
 Teams.propTypes = {
-  teams: PropTypes.array.isRequired
-  // onClickHandler: PropTypes.func.isRequired
+  teams: PropTypes.array.isRequired,
+  onClickHandler: PropTypes.func.isRequired
 };
 
 export default Teams;

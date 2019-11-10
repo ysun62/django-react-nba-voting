@@ -22,15 +22,19 @@
 .header {
   display: flex;
   align-items: center;
+  justify-content: center;
   background: #173c4c;
   color: white;
   height: 30px;
   margin-bottom: -1px;
 }
 
-.header h4 {
-  text-align: left;
+.quiz-header {
+  display: flex;
+  align-items: center;
+  height: 100%;
   margin-left: 10px;
+  /* background: green; */
 }
 
 .close {
@@ -57,7 +61,7 @@
   /* background: yellow; */
   width: 85%;
   color: #536f72;
-  padding: 10px;
+  padding-bottom: 10px;
 }
 
 .answer-section {
