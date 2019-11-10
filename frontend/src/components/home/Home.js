@@ -1,12 +1,12 @@
 import React from "react";
 import axios from "axios";
 import { withAlert } from "react-alert";
-import { loadUser } from "../../actions/auth";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { update_up, update_down } from "../../actions/auth";
 
 import Teams from "../teams/Teams";
+import teams from "../../api/teams.json";
 import "./Home.css";
 
 export class Home extends React.Component {
@@ -14,69 +14,17 @@ export class Home extends React.Component {
     upVote: "",
     downVote: "",
     clickedTeam: "",
-    teams: [
-      {
-        id: "warriors",
-        name: "Golden State Warriors",
-        teamBackground: { background: "#02569E" },
-        textColor: { color: "#F6B426" },
-        votedUpColor: { color: "black" },
-        votedDownColor: { color: "black" }
-      },
-      {
-        id: "lakers",
-        name: "Los Angeles Lakers",
-        teamBackground: { background: "#F8B428" },
-        textColor: { color: "#54237F" },
-        votedUpColor: { color: "black" },
-        votedDownColor: { color: "black" }
-      },
-      {
-        id: "rockets",
-        name: "Houston Rockets",
-        teamBackground: { background: "#F8F8F8" },
-        textColor: { color: "#B91E38" },
-        votedUpColor: { color: "black" },
-        votedDownColor: { color: "black" }
-      },
-      {
-        id: "nets",
-        name: "Brooklyn Nets",
-        teamBackground: { background: "black" },
-        textColor: { color: "#EEEDEB" },
-        votedUpColor: { color: "black" },
-        votedDownColor: { color: "black" }
-      },
-      {
-        id: "clippers",
-        name: "Los Angeles Clippers",
-        teamBackground: { background: "#DA233F" },
-        textColor: { color: "#00589C" },
-        votedUpColor: { color: "black" },
-        votedDownColor: { color: "black" }
-      },
-      {
-        id: "bucks",
-        name: "Milwaukee Bucks",
-        teamBackground: { background: "#E1CAA2" },
-        textColor: { color: "#295133" },
-        votedUpColor: { color: "black" },
-        votedDownColor: { color: "black" }
-      }
-    ]
+    teams: teams
   };
 
+  // When component mounted, add in thumbUp & thumbDown properties to each team
   componentDidMount() {
-    this.props.loadUser();
     axios.get("/api/teams/").then(res => {
       this.setState({
-        teams: this.state.teams.map(team => {
-          res.data.map(vote => {
-            if (vote.id === team.id) {
-              team.thumbUp = vote.thumbUp;
-              team.thumbDown = vote.thumbDown;
-            }
-          });
+        teams: this.state.teams.map((team, index) => {
+          let vote = res.data[index];
+          team.thumbUp = vote.thumbUp;
+          team.thumbDown = vote.thumbDown;
           return team;
         })
       });
@@ -202,7 +150,6 @@ export class Home extends React.Component {
 Home.propTypes = {
   update_up: PropTypes.func.isRequired,
   update_down: PropTypes.func.isRequired,
-  loadUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired
 };
 
@@ -212,5 +159,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { update_up, update_down, loadUser }
+  { update_up, update_down }
 )(withAlert()(Home));

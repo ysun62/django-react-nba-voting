@@ -4,9 +4,9 @@ import { Provider } from "react-redux";
 import { Provider as AlertProvider } from "react-alert";
 import AlertTemplate from "react-alert-template-basic";
 import store from "../store";
+import { loadUser } from "../actions/auth";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 
-import questions from "../api/questions.json";
 import Alerts from "./alerts/Alerts";
 import Header from "./header/Header";
 import Trivia from "./trivia/Trivia";
@@ -38,6 +38,10 @@ class App extends React.Component {
     subMenuOpen: false,
     modalOpen: false
   };
+
+  componentDidMount() {
+    store.dispatch(loadUser());
+  }
 
   sideDrawerOpenHandler = () => {
     this.setState(prevState => {
@@ -124,7 +128,5 @@ class App extends React.Component {
     );
   }
 }
-
-export default App;
 
 ReactDOM.render(<App />, document.getElementById("app"));
