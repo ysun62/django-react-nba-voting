@@ -54,7 +54,7 @@
   }
 }
 
-@media screen and (min-width: 568px) and (orientation: landscape) {
+@media screen and (min-width: 500px) and (max-height: 500px) and (orientation: landscape) {
   .home {
     margin-top: 13vh;
   }
@@ -86,7 +86,7 @@
   }
 }
 
-@media screen and (min-width: 900px) and (orientation: landscape) {
+@media screen and (min-width: 830px) and (orientation: landscape) {
   .home {
     margin-top: 7vh;
   }

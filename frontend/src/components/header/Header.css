@@ -113,7 +113,7 @@ a {
   margin: 20px 0;
 }
 
-@media screen and (min-width: 500px) and (orientation: landscape) {
+@media screen and (min-width: 500px) and (max-height: 500px) and (orientation: landscape) {
   header {
     height: 13vh;
   }
@@ -149,9 +149,6 @@ a {
 }
 
 @media screen and (min-width: 830px) and (orientation: landscape) {
-  header {
-    height: 7vh;
-  }
   .header_logo a {
     margin-left: 55px;
     font-size: 25px;
