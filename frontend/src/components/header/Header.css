@@ -148,7 +148,7 @@ a {
   }
 }
 
-@media screen and (min-width: 900px) and (orientation: landscape) {
+@media screen and (min-width: 830px) and (orientation: landscape) {
   header {
     height: 7vh;
   }
