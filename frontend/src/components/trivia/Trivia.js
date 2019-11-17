@@ -10,7 +10,12 @@ class Trivia extends React.Component {
     questions: questions,
     question: null,
     currentQuestionNum: 0,
-    seconds: 10
+    myAnswer: null,
+    correct: null,
+    correctCount: 0,
+    seconds: 10,
+    isEnd: false,
+    finished: false
   };
 
   componentDidMount() {
@@ -18,21 +23,50 @@ class Trivia extends React.Component {
   }
 
   updateState = () => {
-    const { questions } = this.state;
+    const { questions, myAnswer, correct } = this.state;
     let q = questions[Math.floor(Math.random() * questions.length)];
+    if (myAnswer === correct && correct) {
+      this.setState(prevState => ({
+        correctCount: prevState.correctCount + 1
+      }));
+    }
+
     this.setState(prevState => ({
       question: q,
       questions: [...questions.filter(question => question.id !== q.id)],
+      myAnswer: null,
+      correct: q.correct,
       currentQuestionNum: prevState.currentQuestionNum + 1
     }));
   };
 
-  componentDidUpdate(prevState) {
-    const { questions } = this.state;
-    if (questions !== prevState.questions && questions.length > 0) {
+  componentDidUpdate(prevProps, prevState) {
+    const {
+      questions,
+      question,
+      myAnswer,
+      correct,
+      isEnd,
+      finished
+    } = this.state;
+    if (question !== prevState.question && questions.length > 0) {
       this.timerHandle = setTimeout(() => {
         this.updateState();
+        if (questions.length === 1) {
+          setTimeout(() => {
+            this.setState({
+              isEnd: true
+            });
+          }, 10000);
+        }
       }, 10000);
+    } else if (isEnd && questions.length === 0) {
+      if (myAnswer === correct && !finished) {
+        this.setState(prevState => ({
+          correctCount: prevState.correctCount + 1,
+          finished: true
+        }));
+      }
     }
   }
 
@@ -44,7 +78,12 @@ class Trivia extends React.Component {
     e.target.style.background =
       "linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(3,22,28,1) 0%, rgba(11,88,103,1) 100%)";
 
-    console.log(this.state.question.correct);
+    let value = e.target.innerHTML;
+    if (!this.state.isEnd) {
+      this.setState({
+        myAnswer: value
+      });
+    }
   };
 
   componentWillUnmount() {
@@ -55,7 +94,7 @@ class Trivia extends React.Component {
   }
 
   render() {
-    const { question, currentQuestionNum } = this.state;
+    const { question, currentQuestionNum, correctCount } = this.state;
     const quiz_section = question !== null && (
       <React.Fragment>
         <div className="quiz-question">
@@ -73,7 +112,7 @@ class Trivia extends React.Component {
           ))}
         </ul>
         <div className="timer">
-          <Timer question={question} />
+          <Timer question={question} correctCount={correctCount} />
         </div>
       </React.Fragment>
     );

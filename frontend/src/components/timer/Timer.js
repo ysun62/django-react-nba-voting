@@ -3,7 +3,8 @@ import React, { Component } from "react";
 export default class Timer extends Component {
   state = {
     seconds: 10,
-    questionNum: 1
+    questionNum: 1,
+    finished: false
   };
 
   componentDidMount() {
@@ -22,35 +23,31 @@ export default class Timer extends Component {
         });
       }
       if (questionNum >= 10 && seconds === 1) {
+        this.setState({
+          finished: true
+        });
         clearInterval(this.myInterval);
       }
     }, 1000);
   }
-
-  //   UNSAFE_componentWillReceiveProps(nextProps) {
-  //     if (nextProps.question !== this.props.question) {
-  //       this.setState({
-  //         seconds: 10,
-  //         questionNum: this.state.questionNum + 1
-  //       });
-  //     }
-  //   }
 
   componentWillUnmount() {
     clearInterval(this.myInterval);
   }
 
   render() {
-    const { seconds, questionNum } = this.state;
-    //    let display =
+    const { seconds, questionNum, finished } = this.state;
+
     return (
       <React.Fragment>
-        {questionNum >= 10 && seconds === 1 ? (
-          <h4>finished</h4>
+        {questionNum >= 10 && finished ? (
+          <h4>You got {this.props.correctCount} right! Good job!</h4>
         ) : (
-          <h4>{seconds}</h4>
+          <React.Fragment>
+            <h4>{seconds}</h4>
+            <h4>TIME REMAINING</h4>
+          </React.Fragment>
         )}
-        <h4>TIME REMAINING</h4>
       </React.Fragment>
     );
   }
