@@ -1,17 +1,17 @@
 [
   {
-    "id": "warriors",
-    "name": "Golden State Warriors",
-    "teamBackground": { "background": "#02569E" },
-    "textColor": { "color": "#F6B426" },
-    "votedUpColor": { "color": "black" },
-    "votedDownColor": { "color": "black" }
-  },
-  {
     "id": "lakers",
     "name": "Los Angeles Lakers",
     "teamBackground": { "background": "#F8B428" },
     "textColor": { "color": "#54237F" },
+    "votedUpColor": { "color": "black" },
+    "votedDownColor": { "color": "black" }
+  },
+  {
+    "id": "celtics",
+    "name": "Boston Celtics",
+    "teamBackground": { "background": "#007F47" },
+    "textColor": { "color": "#F8F8F8" },
     "votedUpColor": { "color": "black" },
     "votedDownColor": { "color": "black" }
   },
@@ -24,10 +24,10 @@
     "votedDownColor": { "color": "black" }
   },
   {
-    "id": "nets",
-    "name": "Brooklyn Nets",
+    "id": "raptors",
+    "name": "Toronto Raptors",
     "teamBackground": { "background": "black" },
-    "textColor": { "color": "#EEEDEB" },
+    "textColor": { "color": "#C7113F" },
     "votedUpColor": { "color": "black" },
     "votedDownColor": { "color": "black" }
   },

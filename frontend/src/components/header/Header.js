@@ -67,13 +67,13 @@ class Header extends React.Component {
               </div>
               <ul className={subMenuClasses_desktop}>
                 <li onClick={this.subMenuCloseHandler}>
-                  <NavLink to="/roster/warriors" activeClassName="active">
-                    Warriors
+                  <NavLink to="/roster/lakers" activeClassName="active">
+                    Lakers
                   </NavLink>
                 </li>
                 <li onClick={this.subMenuCloseHandler}>
-                  <NavLink to="/roster/lakers" activeClassName="active">
-                    Lakers
+                  <NavLink to="/roster/celtics" activeClassName="active">
+                    Celtics
                   </NavLink>
                 </li>
                 <li onClick={this.subMenuCloseHandler}>
@@ -82,8 +82,8 @@ class Header extends React.Component {
                   </NavLink>
                 </li>
                 <li onClick={this.subMenuCloseHandler}>
-                  <NavLink to="/roster/nets" activeClassName="active">
-                    Nets
+                  <NavLink to="/roster/raptors" activeClassName="active">
+                    Raptors
                   </NavLink>
                 </li>
                 <li onClick={this.subMenuCloseHandler}>
@@ -118,7 +118,4 @@ const mapStateToProps = state => ({
   auth: state.auth
 });
 
-export default connect(
-  mapStateToProps,
-  { logout }
-)(Header);
+export default connect(mapStateToProps, { logout })(Header);

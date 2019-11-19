@@ -48,20 +48,20 @@ const SideDrawer = props => {
           <ul className={subMenuClasses}>
             <li>
               <NavLink
-                to="/roster/warriors"
-                activeClassName="active"
-                onClick={props.sideDrawerCloseHandler}
-              >
-                Warriors
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
                 to="/roster/lakers"
                 activeClassName="active"
                 onClick={props.sideDrawerCloseHandler}
               >
                 Lakers
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/roster/celtics"
+                activeClassName="active"
+                onClick={props.sideDrawerCloseHandler}
+              >
+                Celtics
               </NavLink>
             </li>
             <li>
@@ -75,11 +75,11 @@ const SideDrawer = props => {
             </li>
             <li>
               <NavLink
-                to="/roster/nets"
+                to="/roster/raptors"
                 activeClassName="active"
                 onClick={props.sideDrawerCloseHandler}
               >
-                Nets
+                Raptors
               </NavLink>
             </li>
             <li>
@@ -158,7 +158,4 @@ const mapStateToProps = state => ({
   auth: state.auth
 });
 
-export default connect(
-  mapStateToProps,
-  { logout }
-)(SideDrawer);
+export default connect(mapStateToProps, { logout })(SideDrawer);

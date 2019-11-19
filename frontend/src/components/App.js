@@ -14,10 +14,10 @@ import Footer from "./footer/Footer";
 import SideDrawer from "./sideDrawer/SideDrawer";
 import Backdrop from "./backdrop/Backdrop";
 import Home from "./home/Home";
-import Warriors from "./roster/Warriors";
+import Raptors from "./roster/Raptors";
 import Lakers from "./roster/Lakers";
 import Rockets from "./roster/Rockets";
-import Nets from "./roster/Nets";
+import Celtics from "./roster/Celtics";
 import Clippers from "./roster/Clippers";
 import Bucks from "./roster/Bucks";
 import Login from "./user/Login";
@@ -112,10 +112,10 @@ class App extends React.Component {
             <main>
               <Switch>
                 <Route exact path="/" component={Home} />
-                <Route path="/roster/warriors" component={Warriors} />
                 <Route path="/roster/lakers" component={Lakers} />
+                <Route path="/roster/celtics" component={Celtics} />
                 <Route path="/roster/rockets" component={Rockets} />
-                <Route path="/roster/nets" component={Nets} />
+                <Route path="/roster/raptors" component={Raptors} />
                 <Route path="/roster/clippers" component={Clippers} />
                 <Route path="/roster/bucks" component={Bucks} />
                 <Route path="/login" component={Login} />
