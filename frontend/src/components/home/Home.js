@@ -19,6 +19,13 @@ export class Home extends React.Component {
 
   // When component mounted, add in thumbUp & thumbDown properties to each team
   componentDidMount() {
+    const { user } = this.props.auth;
+    if (user) {
+      this.setState({
+        upVote: user.upVote,
+        downVote: user.downVote
+      });
+    }
     axios.get("/api/teams/").then(res => {
       this.setState({
         teams: this.state.teams.map(team => {
@@ -160,7 +167,6 @@ const mapStateToProps = state => ({
   auth: state.auth
 });
 
-export default connect(
-  mapStateToProps,
-  { update_up, update_down }
-)(withAlert()(Home));
+export default connect(mapStateToProps, { update_up, update_down })(
+  withAlert()(Home)
+);
