@@ -2,7 +2,7 @@
   {
     "id": "lakers",
     "name": "Los Angeles Lakers",
-    "teamBackground": { "background": "#F8B428" },
+    "teamBackground": { "background": "#EFAF2B" },
     "textColor": { "color": "#54237F" },
     "votedUpColor": { "color": "black" },
     "votedDownColor": { "color": "black" }
@@ -10,7 +10,7 @@
   {
     "id": "celtics",
     "name": "Boston Celtics",
-    "teamBackground": { "background": "#007F47" },
+    "teamBackground": { "background": "#016E3F" },
     "textColor": { "color": "#F8F8F8" },
     "votedUpColor": { "color": "black" },
     "votedDownColor": { "color": "black" }

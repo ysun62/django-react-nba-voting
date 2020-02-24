@@ -7,15 +7,32 @@ import { Link } from "react-router-dom";
 function Team(props) {
   const { id, teamBackground, textColor, name } = props.team;
 
+  let logoClasses = "team-logo";
+  if (id === "lakers") logoClasses = "team-logo lakers-logo";
+  if (id === "raptors") logoClasses = "team-logo raptors-logo";
+
   return (
     <div className="team">
-      {/* <img src={props.team.img} alt="team logo"/> */}
       <div className="team-background" style={teamBackground}>
+        <Link to={"/roster/" + id}>
+          <img
+            src={require(`./logo/${id}.png`)}
+            alt="team logo"
+            className={logoClasses}
+          />
+        </Link>
+      </div>
+      {/* <div className="team-background" style={teamBackground}>
         <Link to={"/roster/" + id}>
           <h3 style={textColor}>{name}</h3>
         </Link>
-      </div>
-      <Rating onClickHandler={props.onClickHandler} team={props.team} />
+      </div> */}
+      <Rating
+        upVote={props.upVote}
+        downVote={props.downVote}
+        onClickHandler={props.onClickHandler}
+        team={props.team}
+      />
     </div>
   );
 }

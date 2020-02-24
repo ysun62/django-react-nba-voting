@@ -7,7 +7,13 @@ function Teams(props) {
   return (
     <div className="teams">
       {props.teams.map(team => (
-        <Team key={team.id} team={team} onClickHandler={props.onClickHandler} />
+        <Team
+          key={team.id}
+          upVote={props.upVote}
+          downVote={props.downVote}
+          team={team}
+          onClickHandler={props.onClickHandler}
+        />
       ))}
     </div>
   );

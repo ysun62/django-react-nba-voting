@@ -131,11 +131,15 @@ export class Home extends React.Component {
         </h4>
         <h4 style={{ textAlign: "left" }} className="welcome-header-line">
           <span>
-            Your Vote: <i className="far fa-thumbs-up up"></i>
+            Your Vote:{" "}
+            <i className="far fa-thumbs-up up" style={{ color: "#1E95E0" }}></i>
             <span style={{ textTransform: "capitalize" }}>{upVote}</span>
           </span>{" "}
           <span>
-            <i className="far fa-thumbs-down down"></i>
+            <i
+              className="far fa-thumbs-down down"
+              style={{ color: "#F8004C" }}
+            ></i>
             <span style={{ textTransform: "capitalize" }}>{downVote}</span>
           </span>
         </h4>
@@ -148,6 +152,8 @@ export class Home extends React.Component {
           {isAuthenticated && welcome_header}
           <h2>Who Is Your NBA Champion This Year?</h2>
           <Teams
+            upVote={this.state.upVote}
+            downVote={this.state.downVote}
             teams={this.state.teams}
             onClickHandler={this.onClickHandler}
           />

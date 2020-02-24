@@ -1,15 +1,24 @@
 import React from "react";
 import "./Rating.css";
 import PropTypes from "prop-types";
+import { connect } from "react-redux";
 
 function Rating(props) {
   const { thumbUp, thumbDown, id, votedUpColor, votedDownColor } = props.team;
+  const { upVote, downVote, onClickHandler } = props;
+  const { user } = props.auth;
+
+  let thumbUpColor =
+    user && id === upVote ? { color: "#1E95E0" } : votedUpColor;
+  let thumbDownColor =
+    user && id === downVote ? { color: "#F8004C" } : votedDownColor;
+
   return (
     <div className="rating">
       <button
         className="thumb-up up"
-        style={votedUpColor}
-        onClick={e => props.onClickHandler(id, e)}
+        style={thumbUpColor}
+        onClick={e => onClickHandler(id, e)}
       >
         <i className="far fa-thumbs-up up"></i>
         <span style={{ userSelect: "none" }} className="up">
@@ -18,8 +27,8 @@ function Rating(props) {
       </button>
       <button
         className="thumb-down down"
-        style={votedDownColor}
-        onClick={e => props.onClickHandler(id, e)}
+        style={thumbDownColor}
+        onClick={e => onClickHandler(id, e)}
       >
         <i className="far fa-thumbs-down down"></i>
         <span style={{ userSelect: "none" }} className="down">
@@ -35,4 +44,8 @@ Rating.propTypes = {
   onClickHandler: PropTypes.func.isRequired
 };
 
-export default Rating;
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+
+export default connect(mapStateToProps)(Rating);

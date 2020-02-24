@@ -17,7 +17,7 @@
   align-items: center;
   justify-content: center;
   /* border-radius: 50%; */
-  /* margin-bottom: 20px; */
+  margin-bottom: 5px;
 }
 
 .team a {
@@ -31,6 +31,19 @@ h3 {
   width: 83%;
   user-select: none;
   /* cursor: pointer; */
+}
+
+.team-logo {
+  width: 50%;
+  cursor: pointer;
+}
+
+.raptors-logo {
+  width: 43%;
+}
+
+.lakers-logo {
+  width: 60%;
 }
 
 @media screen and (min-width: 375px) and (min-height: 740px) {
