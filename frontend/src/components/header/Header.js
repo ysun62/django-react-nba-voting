@@ -32,11 +32,10 @@ class Header extends React.Component {
     return (
       <header>
         <nav className="navbar">
-          <div className="burger" onClick={this.props.sideDrawerOpenHandler}>
-            <div className="burger_line1"></div>
-            <div className="burger_line2"></div>
-            <div className="burger_line3"></div>
-          </div>
+          <i
+            className="fas fa-bars burger"
+            onClick={this.props.sideDrawerOpenHandler}
+          ></i>
           <div className="header_logo">
             <Link to="/" onClick={this.subMenuCloseHandler}>
               NBA VOTING

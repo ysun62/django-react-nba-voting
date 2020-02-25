@@ -16,7 +16,7 @@ const SideDrawer = props => {
     subMenuClasses = "sub-menu open";
   }
   return (
-    <nav
+    <div
       className={sideDrawerClasses}
       style={{
         boxShadow: props.sideDrawerOpen
@@ -24,126 +24,139 @@ const SideDrawer = props => {
           : "none"
       }}
     >
-      <ul className="main-menu">
-        <li>
-          <Link
-            to="/"
-            onClick={() => {
-              props.subMenuCloseHandler();
-              props.sideDrawerCloseHandler();
-            }}
-          >
-            Home
-          </Link>
-        </li>
-        <li className="roster">
-          <div
-            className="roster-div margin-left"
-            onClick={props.subMenuOpenHandler}
-            style={{ color: props.subMenuOpen && "#1D428A" }}
-          >
-            Roster
-            <i className="fas fa-sort-down sort-down"></i>
-          </div>
-          <ul className={subMenuClasses}>
-            <li>
-              <NavLink
-                to="/roster/lakers"
-                activeClassName="active"
-                onClick={props.sideDrawerCloseHandler}
-              >
-                Lakers
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/roster/celtics"
-                activeClassName="active"
-                onClick={props.sideDrawerCloseHandler}
-              >
-                Celtics
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/roster/rockets"
-                activeClassName="active"
-                onClick={props.sideDrawerCloseHandler}
-              >
-                Rockets
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/roster/raptors"
-                activeClassName="active"
-                onClick={props.sideDrawerCloseHandler}
-              >
-                Raptors
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/roster/clippers"
-                activeClassName="active"
-                onClick={props.sideDrawerCloseHandler}
-              >
-                Clippers
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/roster/bucks"
-                activeClassName="active"
-                onClick={props.sideDrawerCloseHandler}
-              >
-                Bucks
-              </NavLink>
-            </li>
-          </ul>
-        </li>
-        <li className="seperate-line">
-          <div className="line"></div>
-        </li>
-        <li className="login-li">
-          {props.auth.isAuthenticated ? (
+      <div className="side-drawer-header_logo">
+        <Link
+          to="/"
+          onClick={() => {
+            props.subMenuCloseHandler();
+            props.sideDrawerCloseHandler();
+          }}
+        >
+          NBA VOTING
+        </Link>
+      </div>
+      <nav>
+        <ul className="main-menu">
+          <li>
             <Link
               to="/"
               onClick={() => {
                 props.subMenuCloseHandler();
                 props.sideDrawerCloseHandler();
-                props.logout();
               }}
             >
-              Sign Out
+              Home
             </Link>
-          ) : (
-            <Link
-              to="/login"
-              onClick={() => {
-                props.subMenuCloseHandler();
-                props.sideDrawerCloseHandler();
-              }}
+          </li>
+          <li className="roster">
+            <div
+              className="roster-div"
+              onClick={props.subMenuOpenHandler}
+              style={{ color: props.subMenuOpen && "#1D428A" }}
             >
-              Sign In
-            </Link>
-          )}
-        </li>
-        <li>
-          {!props.auth.isAuthenticated && (
-            <Link
-              to="/register"
-              onClick={() => {
-                props.subMenuCloseHandler();
-                props.sideDrawerCloseHandler();
-              }}
-            >
-              Register
-            </Link>
-          )}
-        </li>
-      </ul>
-    </nav>
+              Roster
+              <i className="fas fa-sort-down sort-down"></i>
+            </div>
+            <ul className={subMenuClasses}>
+              <li>
+                <NavLink
+                  to="/roster/lakers"
+                  activeClassName="active"
+                  onClick={props.sideDrawerCloseHandler}
+                >
+                  Lakers
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/roster/celtics"
+                  activeClassName="active"
+                  onClick={props.sideDrawerCloseHandler}
+                >
+                  Celtics
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/roster/rockets"
+                  activeClassName="active"
+                  onClick={props.sideDrawerCloseHandler}
+                >
+                  Rockets
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/roster/raptors"
+                  activeClassName="active"
+                  onClick={props.sideDrawerCloseHandler}
+                >
+                  Raptors
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/roster/clippers"
+                  activeClassName="active"
+                  onClick={props.sideDrawerCloseHandler}
+                >
+                  Clippers
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/roster/bucks"
+                  activeClassName="active"
+                  onClick={props.sideDrawerCloseHandler}
+                >
+                  Bucks
+                </NavLink>
+              </li>
+            </ul>
+          </li>
+          {/* <li className="seperate-line">
+            <div className="line"></div>
+          </li> */}
+          <li className="login-li">
+            {props.auth.isAuthenticated ? (
+              <Link
+                to="/"
+                onClick={() => {
+                  props.subMenuCloseHandler();
+                  props.sideDrawerCloseHandler();
+                  props.logout();
+                }}
+              >
+                Sign Out
+              </Link>
+            ) : (
+              <Link
+                to="/login"
+                onClick={() => {
+                  props.subMenuCloseHandler();
+                  props.sideDrawerCloseHandler();
+                }}
+              >
+                Sign In
+              </Link>
+            )}
+          </li>
+          <li>
+            {!props.auth.isAuthenticated && (
+              <Link
+                to="/register"
+                onClick={() => {
+                  props.subMenuCloseHandler();
+                  props.sideDrawerCloseHandler();
+                }}
+              >
+                Register
+              </Link>
+            )}
+          </li>
+        </ul>
+      </nav>
+    </div>
   );
 };
 

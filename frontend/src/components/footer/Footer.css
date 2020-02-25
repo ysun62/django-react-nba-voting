@@ -6,11 +6,12 @@ footer {
 }
 
 footer i {
+  float: right;
   font-size: 25px;
   color: #d0411f;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
-  margin-left: 10px;
+  margin-right: 10px;
   cursor: pointer;
 
   animation: bounce 0.5s;

@@ -60,27 +60,15 @@ a {
 }
 
 .burger {
-  height: 20px;
-  width: 30px;
-  background: transparent;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-left: 20px;
+  color: black;
   cursor: pointer;
-  border: none;
-  box-sizing: border-box;
+  margin-left: 20px;
+  font-size: 1.7em;
 }
 
-.burger:focus {
+/* header:focus {
   outline: none;
-}
-
-.burger div {
-  background: rgb(0, 0, 0);
-  height: 3px;
-  width: 28px;
-}
+} */
 
 .roster-div-desktop {
   cursor: pointer;
@@ -119,16 +107,15 @@ a {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .burger {
-    display: none;
+    padding-top: 3px;
+    font-size: 2em;
+    margin-left: 30px;
   }
   .header_logo a {
-    margin-left: 55px;
-    font-size: 30px;
-  }
-  .desktop-ul {
-    display: flex;
+    margin-left: 20px;
+    font-size: 25px;
   }
 }
 
@@ -152,5 +139,20 @@ a {
   .header_logo a {
     margin-left: 55px;
     font-size: 25px;
+  }
+  .desktop-ul li {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (orientation: portrait) {
+  .burger {
+    display: none;
+  }
+  .header_logo a {
+    margin-left: 55px;
+  }
+  .desktop-ul {
+    display: flex;
   }
 }
