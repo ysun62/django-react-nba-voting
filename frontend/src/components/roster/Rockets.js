@@ -1,7 +1,7 @@
 import React from "react";
 import RosterLayout from "../rosterLayout/RosterLayout";
 import rockets from "../../api/rockets.json";
-// import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
 class Rockets extends React.Component {
   state = {
@@ -13,7 +13,11 @@ class Rockets extends React.Component {
 
   render() {
     return (
-      <div>
+      <div
+        onClick={() => {
+          this.props.subMenuCloseHandler();
+        }}
+      >
         <RosterLayout data={this.state} />
         {/* {console.log(this.state.roster)} */}
       </div>
@@ -21,8 +25,8 @@ class Rockets extends React.Component {
   }
 }
 
-// Rockets.propTypes = {
-
-// }
+Rockets.propTypes = {
+  subMenuCloseHandler: PropTypes.func.isRequired
+};
 
 export default Rockets;

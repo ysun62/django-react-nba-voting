@@ -6,106 +6,88 @@ import { logout } from "../../actions/auth";
 
 import "./Header.css";
 
-class Header extends React.Component {
-  state = {
-    subMenuOpen: false
-  };
+const Header = props => {
+  let subMenuClasses_desktop = "sub-menu-desktop";
+  if (props.subMenuOpen) {
+    subMenuClasses_desktop = "sub-menu-desktop open";
+  }
 
-  subMenuOpenHandler = () => {
-    this.setState(prevState => {
-      return { subMenuOpen: !prevState.subMenuOpen };
-    });
-  };
-
-  subMenuCloseHandler = () => {
-    this.setState({
-      subMenuOpen: false
-    });
-  };
-
-  render() {
-    let subMenuClasses_desktop = "sub-menu-desktop";
-    if (this.state.subMenuOpen) {
-      subMenuClasses_desktop = "sub-menu-desktop open";
-    }
-
-    return (
-      <header>
-        <nav className="navbar">
-          <i
-            className="fas fa-bars burger"
-            onClick={this.props.sideDrawerOpenHandler}
-          ></i>
-          <div className="header_logo">
-            <Link to="/" onClick={this.subMenuCloseHandler}>
-              NBA VOTING
-            </Link>
-          </div>
-          <div className="spacer"></div>
-          <ul className="desktop-ul">
-            <li onClick={this.subMenuCloseHandler}>
-              {this.props.auth.isAuthenticated ? (
-                <Link to="/" onClick={this.props.logout}>
-                  Sign Out
-                </Link>
-              ) : (
-                <Link to="/login">Sign In/Up</Link>
-              )}
-            </li>
-            <li onClick={this.subMenuCloseHandler}>
-              <Link to="/">Home</Link>
-            </li>
-            <li className="sub-menu-li">
-              <div
-                className="roster-div-desktop"
-                onClick={this.subMenuOpenHandler}
-                style={{ color: this.state.subMenuOpen && "#1D428A" }}
-              >
-                Roster
-                <i className="fas fa-sort-down sort-down-desktop"></i>
-              </div>
-              <ul className={subMenuClasses_desktop}>
-                <li onClick={this.subMenuCloseHandler}>
-                  <NavLink to="/roster/lakers" activeClassName="active">
-                    Lakers
-                  </NavLink>
-                </li>
-                <li onClick={this.subMenuCloseHandler}>
-                  <NavLink to="/roster/celtics" activeClassName="active">
-                    Celtics
-                  </NavLink>
-                </li>
-                <li onClick={this.subMenuCloseHandler}>
-                  <NavLink to="/roster/rockets" activeClassName="active">
-                    Rockets
-                  </NavLink>
-                </li>
-                <li onClick={this.subMenuCloseHandler}>
-                  <NavLink to="/roster/raptors" activeClassName="active">
-                    Raptors
-                  </NavLink>
-                </li>
-                <li onClick={this.subMenuCloseHandler}>
-                  <NavLink to="/roster/clippers" activeClassName="active">
-                    Clippers
-                  </NavLink>
-                </li>
-                <li onClick={this.subMenuCloseHandler}>
-                  <NavLink to="/roster/bucks" activeClassName="active">
-                    Bucks
-                  </NavLink>
-                </li>
-              </ul>
-            </li>
-            {/* <li onClick={this.subMenuCloseHandler}>
+  return (
+    <header>
+      <nav className="navbar">
+        <i
+          className="fas fa-bars burger"
+          onClick={props.sideDrawerOpenHandler}
+        ></i>
+        <div className="header_logo">
+          <Link to="/" onClick={props.subMenuCloseHandler}>
+            NBA VOTING
+          </Link>
+        </div>
+        <div className="spacer"></div>
+        <ul className="desktop-ul">
+          <li onClick={props.subMenuCloseHandler}>
+            {props.auth.isAuthenticated ? (
+              <Link to="/" onClick={props.logout}>
+                Sign Out
+              </Link>
+            ) : (
+              <Link to="/login">Sign In/Up</Link>
+            )}
+          </li>
+          <li onClick={props.subMenuCloseHandler}>
+            <Link to="/">Home</Link>
+          </li>
+          <li className="sub-menu-li">
+            <div
+              className="roster-div-desktop"
+              onClick={props.subMenuOpenHandler}
+              style={{ color: props.subMenuOpen && "#1D428A" }}
+            >
+              Roster
+              <i className="fas fa-sort-down sort-down-desktop"></i>
+            </div>
+            <ul className={subMenuClasses_desktop}>
+              <li onClick={props.subMenuCloseHandler}>
+                <NavLink to="/roster/lakers" activeClassName="active">
+                  Lakers
+                </NavLink>
+              </li>
+              <li onClick={props.subMenuCloseHandler}>
+                <NavLink to="/roster/celtics" activeClassName="active">
+                  Celtics
+                </NavLink>
+              </li>
+              <li onClick={props.subMenuCloseHandler}>
+                <NavLink to="/roster/rockets" activeClassName="active">
+                  Rockets
+                </NavLink>
+              </li>
+              <li onClick={props.subMenuCloseHandler}>
+                <NavLink to="/roster/raptors" activeClassName="active">
+                  Raptors
+                </NavLink>
+              </li>
+              <li onClick={props.subMenuCloseHandler}>
+                <NavLink to="/roster/clippers" activeClassName="active">
+                  Clippers
+                </NavLink>
+              </li>
+              <li onClick={props.subMenuCloseHandler}>
+                <NavLink to="/roster/bucks" activeClassName="active">
+                  Bucks
+                </NavLink>
+              </li>
+            </ul>
+          </li>
+          {/* <li onClick={subMenuCloseHandler}>
               <Link to="/register">Register</Link>
             </li> */}
-          </ul>
-        </nav>
-      </header>
-    );
-  }
-}
+        </ul>
+      </nav>
+    </header>
+  );
+};
 
 Header.propTypes = {
   sideDrawerOpenHandler: PropTypes.func.isRequired,

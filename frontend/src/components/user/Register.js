@@ -40,7 +40,7 @@ class Register extends Component {
     }
     const { username, email, password, password2 } = this.state;
     return (
-      <div className="background">
+      <div className="background" onClick={this.props.subMenuCloseHandler}>
         <div className="form">
           <div className="PageSwitcher">
             <NavLink
@@ -124,14 +124,12 @@ class Register extends Component {
 
 Register.propTypes = {
   register: PropTypes.func.isRequired,
-  isAuthenticated: PropTypes.bool
+  isAuthenticated: PropTypes.bool,
+  subMenuCloseHandler: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => ({
   isAuthenticated: state.auth.isAuthenticated
 });
 
-export default connect(
-  mapStateToProps,
-  { register }
-)(withAlert()(Register));
+export default connect(mapStateToProps, { register })(withAlert()(Register));

@@ -1,7 +1,7 @@
 import React from "react";
 import RosterLayout from "../rosterLayout/RosterLayout";
 import bucks from "../../api/bucks.json";
-// import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
 class Bucks extends React.Component {
   state = {
@@ -13,15 +13,19 @@ class Bucks extends React.Component {
 
   render() {
     return (
-      <div>
+      <div
+        onClick={() => {
+          this.props.subMenuCloseHandler();
+        }}
+      >
         <RosterLayout data={this.state} />
       </div>
     );
   }
 }
 
-// Bucks.propTypes = {
-
-// }
+Bucks.propTypes = {
+  subMenuCloseHandler: PropTypes.func.isRequired
+};
 
 export default Bucks;

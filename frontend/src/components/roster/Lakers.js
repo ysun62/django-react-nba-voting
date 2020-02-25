@@ -1,7 +1,7 @@
 import React from "react";
 import RosterLayout from "../rosterLayout/RosterLayout";
 import lakers from "../../api/lakers.json";
-// import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
 class Lakers extends React.Component {
   state = {
@@ -13,15 +13,19 @@ class Lakers extends React.Component {
 
   render() {
     return (
-      <div>
+      <div
+        onClick={() => {
+          this.props.subMenuCloseHandler();
+        }}
+      >
         <RosterLayout data={this.state} />
       </div>
     );
   }
 }
 
-// Lakers.propTypes = {
-
-// }
+Lakers.propTypes = {
+  subMenuCloseHandler: PropTypes.func.isRequired
+};
 
 export default Lakers;

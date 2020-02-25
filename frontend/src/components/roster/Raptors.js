@@ -1,6 +1,7 @@
 import React from "react";
 import RosterLayout from "../rosterLayout/RosterLayout";
 import raptors from "../../api/raptors.json";
+import PropTypes from "prop-types";
 
 class Raptors extends React.Component {
   state = {
@@ -12,11 +13,19 @@ class Raptors extends React.Component {
 
   render() {
     return (
-      <div>
+      <div
+        onClick={() => {
+          this.props.subMenuCloseHandler();
+        }}
+      >
         <RosterLayout data={this.state} />
       </div>
     );
   }
 }
+
+Raptors.propTypes = {
+  subMenuCloseHandler: PropTypes.func.isRequired
+};
 
 export default Raptors;

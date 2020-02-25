@@ -147,7 +147,12 @@ export class Home extends React.Component {
     );
 
     return (
-      <div className="home">
+      <div
+        className="home"
+        onClick={() => {
+          this.props.subMenuCloseHandler();
+        }}
+      >
         <div className="home-container">
           {isAuthenticated && welcome_header}
           <h2>Who Is Your NBA Champion This Year?</h2>
@@ -166,6 +171,7 @@ export class Home extends React.Component {
 Home.propTypes = {
   update_up: PropTypes.func.isRequired,
   update_down: PropTypes.func.isRequired,
+  subMenuCloseHandler: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired
 };
 

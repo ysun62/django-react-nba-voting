@@ -26,7 +26,7 @@ class Login extends Component {
     }
     const { username, password } = this.state;
     return (
-      <div className="background">
+      <div className="background" onClick={this.props.subMenuCloseHandler}>
         <div className="col-md-6 form">
           <div className="PageSwitcher">
             <NavLink
@@ -90,14 +90,12 @@ class Login extends Component {
 
 Login.propTypes = {
   login: PropTypes.func.isRequired,
-  isAuthenticated: PropTypes.bool
+  isAuthenticated: PropTypes.bool,
+  subMenuCloseHandler: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => ({
   isAuthenticated: state.auth.isAuthenticated
 });
 
-export default connect(
-  mapStateToProps,
-  { login }
-)(Login);
+export default connect(mapStateToProps, { login })(Login);
