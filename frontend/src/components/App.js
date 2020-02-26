@@ -56,15 +56,25 @@ class App extends React.Component {
   };
 
   subMenuOpenHandler = () => {
-    this.setState(prevState => {
-      return { subMenuOpen: !prevState.subMenuOpen };
-    });
+    this.setState(
+      prevState => {
+        return { subMenuOpen: !prevState.subMenuOpen };
+      },
+      () => {
+        document.addEventListener("click", this.subMenuCloseHandler);
+      }
+    );
   };
 
   subMenuCloseHandler = () => {
-    this.setState({
-      subMenuOpen: false
-    });
+    this.setState(
+      {
+        subMenuOpen: false
+      },
+      () => {
+        document.removeEventListener("click", this.subMenuCloseHandler);
+      }
+    );
   };
 
   modalOpenHandler = () => {

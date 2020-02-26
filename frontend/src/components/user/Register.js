@@ -40,7 +40,7 @@ class Register extends Component {
     }
     const { username, email, password, password2 } = this.state;
     return (
-      <div className="background" onClick={this.props.subMenuCloseHandler}>
+      <div className="background">
         <div className="form">
           <div className="PageSwitcher">
             <NavLink

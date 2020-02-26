@@ -26,7 +26,7 @@ class Login extends Component {
     }
     const { username, password } = this.state;
     return (
-      <div className="background" onClick={this.props.subMenuCloseHandler}>
+      <div className="background">
         <div className="col-md-6 form">
           <div className="PageSwitcher">
             <NavLink
