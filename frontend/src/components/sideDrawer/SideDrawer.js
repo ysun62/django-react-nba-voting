@@ -141,8 +141,8 @@ const SideDrawer = props => {
               </Link>
             )}
           </li>
-          <li>
-            {!props.auth.isAuthenticated && (
+          {!props.auth.isAuthenticated && (
+            <li>
               <Link
                 to="/register"
                 onClick={() => {
@@ -152,8 +152,8 @@ const SideDrawer = props => {
               >
                 Register
               </Link>
-            )}
-          </li>
+            </li>
+          )}
         </ul>
       </nav>
     </div>
