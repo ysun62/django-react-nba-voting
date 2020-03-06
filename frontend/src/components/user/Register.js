@@ -124,8 +124,7 @@ class Register extends Component {
 
 Register.propTypes = {
   register: PropTypes.func.isRequired,
-  isAuthenticated: PropTypes.bool,
-  subMenuCloseHandler: PropTypes.func.isRequired
+  isAuthenticated: PropTypes.bool
 };
 
 const mapStateToProps = state => ({

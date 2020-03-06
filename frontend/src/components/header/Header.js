@@ -20,13 +20,11 @@ const Header = props => {
           onClick={props.sideDrawerOpenHandler}
         ></i>
         <div className="header_logo">
-          <Link to="/" onClick={props.subMenuCloseHandler}>
-            NBA VOTING
-          </Link>
+          <Link to="/">NBA VOTING</Link>
         </div>
         <div className="spacer"></div>
         <ul className="desktop-ul">
-          <li onClick={props.subMenuCloseHandler}>
+          <li>
             {props.auth.isAuthenticated ? (
               <Link to="/" onClick={props.logout}>
                 Sign Out
@@ -35,7 +33,7 @@ const Header = props => {
               <Link to="/login">Sign In/Up</Link>
             )}
           </li>
-          <li onClick={props.subMenuCloseHandler}>
+          <li>
             <Link to="/">Home</Link>
           </li>
           <li className="sub-menu-li">
@@ -48,32 +46,32 @@ const Header = props => {
               <i className="fas fa-sort-down sort-down-desktop"></i>
             </div>
             <ul className={subMenuClasses_desktop}>
-              <li onClick={props.subMenuCloseHandler}>
+              <li>
                 <NavLink to="/roster/lakers" activeClassName="active">
                   Lakers
                 </NavLink>
               </li>
-              <li onClick={props.subMenuCloseHandler}>
+              <li>
                 <NavLink to="/roster/celtics" activeClassName="active">
                   Celtics
                 </NavLink>
               </li>
-              <li onClick={props.subMenuCloseHandler}>
+              <li>
                 <NavLink to="/roster/rockets" activeClassName="active">
                   Rockets
                 </NavLink>
               </li>
-              <li onClick={props.subMenuCloseHandler}>
+              <li>
                 <NavLink to="/roster/raptors" activeClassName="active">
                   Raptors
                 </NavLink>
               </li>
-              <li onClick={props.subMenuCloseHandler}>
+              <li>
                 <NavLink to="/roster/clippers" activeClassName="active">
                   Clippers
                 </NavLink>
               </li>
-              <li onClick={props.subMenuCloseHandler}>
+              <li>
                 <NavLink to="/roster/bucks" activeClassName="active">
                   Bucks
                 </NavLink>

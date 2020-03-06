@@ -1,12 +1,12 @@
 import React from "react";
 import "./Rating.css";
 import PropTypes from "prop-types";
-import { connect } from "react-redux";
+// import { connect } from "react-redux";
 
-function Rating(props) {
+const Rating = props => {
   const { thumbUp, thumbDown, id, votedUpColor, votedDownColor } = props.team;
-  const { upVote, downVote, onClickHandler } = props;
-  const { user } = props.auth;
+  const { upVote, downVote, onClickHandler, user } = props;
+  // const { user } = props.auth;
 
   let thumbUpColor =
     user && id === upVote ? { color: "#1E95E0" } : votedUpColor;
@@ -14,7 +14,7 @@ function Rating(props) {
     user && id === downVote ? { color: "#F8004C" } : votedDownColor;
 
   return (
-    <div className="rating">
+    <div className="rating" key={id}>
       <button
         className="thumb-up up"
         style={thumbUpColor}
@@ -37,15 +37,16 @@ function Rating(props) {
       </button>
     </div>
   );
-}
+};
 
 Rating.propTypes = {
   team: PropTypes.object.isRequired,
   onClickHandler: PropTypes.func.isRequired
+  // auth: PropTypes.object.isRequired
 };
 
-const mapStateToProps = state => ({
-  auth: state.auth
-});
+// const mapStateToProps = state => ({
+//   auth: state.auth
+// });
 
-export default connect(mapStateToProps)(Rating);
+export default Rating;

@@ -1,8 +1,7 @@
 import React from "react";
 import RosterLayout from "../rosterLayout/RosterLayout";
-subMenuCloseHandler: PropTypes.func.isRequired;
 import clippers from "../../api/clippers.json";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 
 class Clippers extends React.Component {
   state = {
@@ -14,19 +13,15 @@ class Clippers extends React.Component {
 
   render() {
     return (
-      <div
-        onClick={() => {
-          this.props.subMenuCloseHandler();
-        }}
-      >
+      <div>
         <RosterLayout data={this.state} />
       </div>
     );
   }
 }
 
-Clippers.propTypes = {
-  subMenuCloseHandler: PropTypes.func.isRequired
-};
+// Clippers.propTypes = {
+//   subMenuCloseHandler: PropTypes.func.isRequired
+// };
 
 export default Clippers;

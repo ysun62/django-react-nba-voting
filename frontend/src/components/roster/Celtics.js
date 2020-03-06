@@ -1,7 +1,7 @@
 import React from "react";
 import RosterLayout from "../rosterLayout/RosterLayout";
 import celtics from "../../api/celtics.json";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 
 class Celtics extends React.Component {
   state = {
@@ -13,19 +13,15 @@ class Celtics extends React.Component {
 
   render() {
     return (
-      <div
-        onClick={() => {
-          this.props.subMenuCloseHandler();
-        }}
-      >
+      <div>
         <RosterLayout data={this.state} />
       </div>
     );
   }
 }
 
-Celtics.propTypes = {
-  subMenuCloseHandler: PropTypes.func.isRequired
-};
+// Celtics.propTypes = {
+//   subMenuCloseHandler: PropTypes.func.isRequired
+// };
 
 export default Celtics;

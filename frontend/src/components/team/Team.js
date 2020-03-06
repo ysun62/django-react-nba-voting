@@ -4,7 +4,7 @@ import Rating from "../rating/Rating";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-function Team(props) {
+const Team = props => {
   const { id, teamBackground, textColor, name } = props.team;
 
   let logoClasses = "team-logo";
@@ -32,10 +32,11 @@ function Team(props) {
         downVote={props.downVote}
         onClickHandler={props.onClickHandler}
         team={props.team}
+        user={props.user}
       />
     </div>
   );
-}
+};
 
 Team.propTypes = {
   team: PropTypes.object.isRequired,

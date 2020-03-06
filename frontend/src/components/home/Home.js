@@ -11,22 +11,26 @@ import teams from "../../api/teams.json";
 import "./Home.css";
 
 export class Home extends React.Component {
+  _isMounted = false;
+
   state = {
-    upVote: "",
-    downVote: "",
+    upVote: null,
+    downVote: null,
     clickedTeam: "",
     teams: teams
   };
 
+  // Prevent unnecessary re-renders when App.js changes state
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   if (this.state !== nextState || this.props.auth.user !== nextProps.auth.user)
+  //     return true;
+  //   return false;
+  // }
+
   // When component mounted, add in thumbUp & thumbDown properties to each team
   componentDidMount() {
     const { user } = this.props.auth;
-    if (user) {
-      this.setState({
-        upVote: user.upVote,
-        downVote: user.downVote
-      });
-    }
+
     axios.get("/api/teams/").then(res => {
       this.setState({
         teams: this.state.teams.map(team => {
@@ -35,17 +39,29 @@ export class Home extends React.Component {
               team.thumbUp = vote.thumbUp;
               team.thumbDown = vote.thumbDown;
             }
+            return vote;
           });
           return team;
         })
       });
+
+      // Stores user voting info to state when coming from a different page
+      if (user) {
+        if (!(Object.entries(user).length === 0)) {
+          this.setState({
+            upVote: user.upVote,
+            downVote: user.downVote
+          });
+        }
+      }
     });
   }
 
   // When props from Redux come in, set the state
   UNSAFE_componentWillReceiveProps(nextProps) {
     const { user } = nextProps.auth;
-    if (user) {
+
+    if (user !== this.props.auth.user && user) {
       this.setState({
         upVote: user.upVote,
         downVote: user.downVote
@@ -54,7 +70,7 @@ export class Home extends React.Component {
   }
 
   // Handle click on thumbs
-  onClickHandler = async (id, e) => {
+  onClickHandler = (id, e) => {
     const { alert } = this.props;
     const up = e.target.classList.contains("up");
 
@@ -63,7 +79,7 @@ export class Home extends React.Component {
         if (id === this.state.downVote) {
           alert.error("You cannot up vote and down vote the same team!");
         } else {
-          await this.props.update_up(id);
+          this.props.update_up(id);
           this.setState(prevState => {
             return {
               teams: prevState.teams.map(team => {
@@ -83,7 +99,7 @@ export class Home extends React.Component {
         if (id === this.state.upVote) {
           alert.error("You cannot up vote and down vote the same team!");
         } else {
-          await this.props.update_down(id);
+          this.props.update_down(id);
           this.setState(prevState => {
             return {
               teams: prevState.teams.map(team => {
@@ -157,6 +173,7 @@ export class Home extends React.Component {
             downVote={this.state.downVote}
             teams={this.state.teams}
             onClickHandler={this.onClickHandler}
+            user={user}
           />
         </div>
       </div>
@@ -167,7 +184,6 @@ export class Home extends React.Component {
 Home.propTypes = {
   update_up: PropTypes.func.isRequired,
   update_down: PropTypes.func.isRequired,
-  // subMenuCloseHandler: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired
 };
 

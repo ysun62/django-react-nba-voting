@@ -109,7 +109,7 @@ class App extends React.Component {
               sideDrawerOpenHandler={this.sideDrawerOpenHandler}
               subMenuOpenHandler={this.subMenuOpenHandler}
               subMenuOpen={this.state.subMenuOpen}
-              subMenuCloseHandler={this.subMenuCloseHandler}
+              // subMenuCloseHandler={this.subMenuCloseHandler}
             />
             <Alerts />
             {this.state.modalOpen && (
@@ -129,61 +129,15 @@ class App extends React.Component {
             />
             <main>
               <Switch>
-                <Route
-                  exact
-                  path="/"
-                  component={() => (
-                    <Home subMenuCloseHandler={this.subMenuCloseHandler} />
-                  )}
-                />
-                <Route
-                  path="/roster/lakers"
-                  component={() => (
-                    <Lakers subMenuCloseHandler={this.subMenuCloseHandler} />
-                  )}
-                />
-                <Route
-                  path="/roster/celtics"
-                  component={() => (
-                    <Celtics subMenuCloseHandler={this.subMenuCloseHandler} />
-                  )}
-                />
-                <Route
-                  path="/roster/rockets"
-                  component={() => (
-                    <Rockets subMenuCloseHandler={this.subMenuCloseHandler} />
-                  )}
-                />
-                <Route
-                  path="/roster/raptors"
-                  component={() => (
-                    <Raptors subMenuCloseHandler={this.subMenuCloseHandler} />
-                  )}
-                />
-                <Route
-                  path="/roster/clippers"
-                  component={() => (
-                    <Clippers subMenuCloseHandler={this.subMenuCloseHandler} />
-                  )}
-                />
-                <Route
-                  path="/roster/bucks"
-                  component={() => (
-                    <Bucks subMenuCloseHandler={this.subMenuCloseHandler} />
-                  )}
-                />
-                <Route
-                  path="/login"
-                  component={() => (
-                    <Login subMenuCloseHandler={this.subMenuCloseHandler} />
-                  )}
-                />
-                <Route
-                  path="/register"
-                  component={() => (
-                    <Register subMenuCloseHandler={this.subMenuCloseHandler} />
-                  )}
-                />
+                <Route exact path="/" component={Home} />
+                <Route path="/roster/lakers" component={Lakers} />
+                <Route path="/roster/celtics" component={Celtics} />
+                <Route path="/roster/rockets" component={Rockets} />
+                <Route path="/roster/raptors" component={Raptors} />
+                <Route path="/roster/clippers" component={Clippers} />
+                <Route path="/roster/bucks" component={Bucks} />
+                <Route path="/login" component={Login} />
+                <Route path="/register" component={Register} />
               </Switch>
             </main>
           </Router>
