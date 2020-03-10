@@ -31,6 +31,7 @@
     "core-js": "^3.3.2",
     "css-loader": "^3.2.0",
     "image-webpack-loader": "^6.0.0",
+    "logrocket": "^1.0.6",
     "prop-types": "^15.7.2",
     "react": "^16.10.2",
     "react-alert": "^6.0.0",
